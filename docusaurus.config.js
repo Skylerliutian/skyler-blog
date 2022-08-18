@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
     title: "Skyler's Blog",
     tagline: 'Dinosaurs are cool',
-    url: 'https://your-docusaurus-test-site.com',
+    url: 'https://www.baidu.com',
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -32,16 +32,10 @@ const config = {
             'classic',
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
-                docs: {
-                    sidebarPath: require.resolve('./sidebars.js'),
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-                },
+                docs: false,
                 blog: {
                     path: './blog',
-                    routeBasePath: '/',
+                    routeBasePath: '/blog',
                     // showReadingTime: true,
                     // blogSidebarTitle: '最近文章',
                     // blogSidebarCount: 0,
@@ -56,6 +50,21 @@ const config = {
             }),
         ],
     ],
+    plugins: [
+        [
+            '@docusaurus/plugin-content-blog',
+            {
+                id: 'secret-garden',
+                routeBasePath: 'demoblog',
+                path: './demoblog',
+                feedOptions: {
+                    type: 'all',
+                    title: '峰华前端工程师',
+                    copyright: `Copyright © ${new Date().getFullYear()} 峰华 (张旭乾) Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" >冀ICP备14007097号-3</a></p>`,
+                },
+            },
+        ],
+    ],
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
@@ -63,7 +72,7 @@ const config = {
                 title: "Skyler's Blog",
                 logo: {
                     alt: 'My Site Logo',
-                    src: 'img/logo.svg',
+                    src: 'img/logo.jpg',
                 },
                 items: [
                     // {
@@ -72,11 +81,11 @@ const config = {
                     //     position: 'left',
                     //     label: 'Tutorial',
                     // },
-                    { to: '/', label: '博客', position: 'left' },
+                    { to: '/blog', label: '博客', position: 'left' },
                     {
                         label: '首页',
                         position: 'right',
-                        to: '/',
+                        to: '/demoblog',
                         items: [
                             {
                                 label: 'blog',
