@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkskyler_blog=self.webpackChunkskyler_blog||[]).push([[166],{5827:l=>{l.exports=JSON.parse('{"label":"\u95f2\u8a00\u788e\u8bed","permalink":"/skyler-blog/tags/\u95f2\u8a00\u788e\u8bed","allTagsPath":"/skyler-blog/tags","count":1}')}}]);
