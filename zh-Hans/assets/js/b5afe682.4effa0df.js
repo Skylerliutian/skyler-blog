@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkskyler_blog=self.webpackChunkskyler_blog||[]).push([[402],{7677:s=>{s.exports=JSON.parse('{"label":"\u95f2\u8a00\u788e\u8bed","permalink":"/zh-Hans/tags/\u95f2\u8a00\u788e\u8bed","allTagsPath":"/zh-Hans/tags","count":1}')}}]);
