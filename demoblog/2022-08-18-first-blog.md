@@ -1,6 +1,6 @@
 ---
 slug: first-blog
-title: 多博客配置
+title: 个人介绍
 authors: skyler
 tags: [闲言碎语]
 ---
