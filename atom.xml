@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://skylerliutian.github.io/</id>
+    <id>https://Skylerliutian.github.io/</id>
     <title>Skyler's Blog Blog</title>
     <updated>2022-08-19T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://skylerliutian.github.io/"/>
+    <link rel="alternate" href="https://Skylerliutian.github.io/"/>
     <subtitle>Skyler's Blog Blog</subtitle>
-    <icon>https://skylerliutian.github.io/img/favicon.ico</icon>
+    <icon>https://Skylerliutian.github.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Docusaurus 发布网站]]></title>
         <id>deploy-website</id>
-        <link href="https://skylerliutian.github.io/deploy-website"/>
+        <link href="https://Skylerliutian.github.io/deploy-website"/>
         <updated>2022-08-19T00:00:00.000Z</updated>
         <author>
             <name>刘天</name>
@@ -22,7 +22,7 @@
     <entry>
         <title type="html"><![CDATA[Docusaurus搭建博客网站]]></title>
         <id>create-own-blog-website</id>
-        <link href="https://skylerliutian.github.io/create-own-blog-website"/>
+        <link href="https://Skylerliutian.github.io/create-own-blog-website"/>
         <updated>2022-08-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[大概是 2020 年因为疫情，只能在家上网课，空余时间很多，就使用 wordpress + 阿里云服务器搭建了一个博客网站，但是因为自制力不强，把网站搭建起来之后也就没有管理过了，直到去年域名过期了，再加上工作之后积累的一些经验和知识都被零散化的记录在了本地电脑上，所以这又萌生出了搭建一个个人博客网站的念头。用这个博客记录一下自己使用 Docusaurus 搭建博客网站的过程，以及搭建博客网站的步骤。当然采用 Docusaurus 的另一个原因也是在 B 站上看到了 UP 主 峰华前端工程师 的这个视频。]]></summary>
         <content type="html"><![CDATA[<p>大概是 2020 年因为疫情，只能在家上网课，空余时间很多，就使用 wordpress + 阿里云服务器搭建了一个博客网站，但是因为自制力不强，把网站搭建起来之后也就没有管理过了，直到去年域名过期了，再加上工作之后积累的一些经验和知识都被零散化的记录在了本地电脑上，所以这又萌生出了搭建一个个人博客网站的念头。用这个博客记录一下自己使用 Docusaurus 搭建博客网站的过程，以及搭建博客网站的步骤。当然采用 Docusaurus 的另一个原因也是在 B 站上看到了 UP 主 <a href="https://www.bilibili.com/video/BV1uE411x7mE?" target="_blank" rel="noopener noreferrer">峰华前端工程师</a> 的这个视频。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="docusaurus-介绍">Docusaurus 介绍<a class="hash-link" href="#docusaurus-介绍" title="Direct link to heading">​</a></h2><p>官网简介：<a href="https://docusaurus.io/zh-CN/docs" target="_blank" rel="noopener noreferrer">Docusaurus</a> 是一款静态站点生成器。 可以搭建带有快速客户端导航的单页应用，充分利用了 React，让你的网站具有交互能力。 它提供了开箱即用的文档功能，不过也可用于搭建各种网站（个人网站、产品、博客、营销主页，等等）。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="搭建流程">搭建流程<a class="hash-link" href="#搭建流程" title="Direct link to heading">​</a></h2><p>搭建流程官网上有详细的介绍，这里我会把步骤和我遇到的问题，踩过的坑记录下来。</p><ol><li>安装 Docusaurus
@@ -41,7 +41,7 @@
     <entry>
         <title type="html"><![CDATA[个人介绍]]></title>
         <id>first-blog</id>
-        <link href="https://skylerliutian.github.io/first-blog"/>
+        <link href="https://Skylerliutian.github.io/first-blog"/>
         <updated>2022-08-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Hello，大家好啊，我是skyler，一个正在努力学习的前端小菜鸡]]></summary>
         <content type="html"><![CDATA[<p>Hello，大家好啊，我是skyler，一个正在努力学习的前端小菜鸡</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="个人介绍">个人介绍<a class="hash-link" href="#个人介绍" title="Direct link to heading">​</a></h2><p>Hello，我是skyler，毕业于澳大利亚新南威尔士大学，现在在北京就职于某互联网公司，担任前端开发的岗位。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="建立这个博客的目的">建立这个博客的目的<a class="hash-link" href="#建立这个博客的目的" title="Direct link to heading">​</a></h2><p>建立这个博客的目的的原因主要是想把自己在平时工作中或生活中学到的一些知识形成文档沉淀下来。以前就是单纯的记录在电脑本地中，想起来就会记录一下，想不起来也就会忘记了，会错过很多的知识点；再加上可能想记录的东西的类别比较多，通常会记录在不同的文档中，也比较麻烦；有时候会在不经意的时候突然有一个灵感，但是当下有工作需要处理，会匆匆的记录在一个地方，事后就会抛之脑后；建立这个博客除了把自己的学到的知识沉淀下来之外，还有就是通过不断的码字希望可以提升自己的写作能力，也是通过码字来让自己在空闲时间忙起来不能沉迷于游戏。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="最后">最后<a class="hash-link" href="#最后" title="Direct link to heading">​</a></h2><p>今天是2022.8.18日，博客网站还没有搭建起来，之后会把这个网站部署到云服务器上，同时自己也会把搭建博客的流程和部署到云服务器的流程都记录下来的。尽情期待！</p>]]></content>
