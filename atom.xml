@@ -17,6 +17,7 @@
 访问 <a href="https://endiliey.github.io" target="_blank" rel="noopener noreferrer">https://endiliey.github.io</a> 即可看到网站。</p></li><li><p>使用 Github Actions 实现自动部署</p></li></ol>]]></content>
         <author>
             <name>刘天</name>
+            <email>skyler151096@gmail.com</email>
             <uri>https://github.com/Skylerliutian</uri>
         </author>
         <category label="网站搭建" term="网站搭建"/>
@@ -36,6 +37,7 @@
 先找到默认 <code>BlogListPage</code> 这个文件，把源码复制到新建的文件中，这里面包含着拿到博客文章等一些其他的逻辑，可以根据源码进行一些其它的样式方面的修改。</p></blockquote><h2 class="anchor anchorWithStickyNavbar_LWe7" id="待续">待续<a class="hash-link" href="#待续" title="Direct link to heading">​</a></h2><p>以上就是我目前搭建博客的一个基本步骤，但是大部分都是参考官方文档和峰华大佬的源码进行配置的。如果只是单纯的博客对界面没有要求的小伙伴们，可以去写起来了。下一步是更新这个博客的界面和一些其它配置，我会更新在这篇博客中。</p><p>有什么想交流的小伙伴可以联系我哦 <strong><a href="mailto:skyler151096@gmail.com" target="_blank" rel="noopener noreferrer">skyler151096@gmail.com</a></strong></p>]]></content>
         <author>
             <name>刘天</name>
+            <email>skyler151096@gmail.com</email>
             <uri>https://github.com/Skylerliutian</uri>
         </author>
         <category label="网站搭建" term="网站搭建"/>
@@ -50,6 +52,7 @@
         <content type="html"><![CDATA[<p>Hello，大家好啊，我是skyler，一个正在努力学习的前端小菜鸡</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="个人介绍">个人介绍<a class="hash-link" href="#个人介绍" title="Direct link to heading">​</a></h2><p>Hello，我是skyler，毕业于澳大利亚新南威尔士大学，现在在北京就职于某互联网公司，担任前端开发的岗位。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="建立这个博客的目的">建立这个博客的目的<a class="hash-link" href="#建立这个博客的目的" title="Direct link to heading">​</a></h2><p>建立这个博客的目的的原因主要是想把自己在平时工作中或生活中学到的一些知识形成文档沉淀下来。以前就是单纯的记录在电脑本地中，想起来就会记录一下，想不起来也就会忘记了，会错过很多的知识点；再加上可能想记录的东西的类别比较多，通常会记录在不同的文档中，也比较麻烦；有时候会在不经意的时候突然有一个灵感，但是当下有工作需要处理，会匆匆的记录在一个地方，事后就会抛之脑后；建立这个博客除了把自己的学到的知识沉淀下来之外，还有就是通过不断的码字希望可以提升自己的写作能力，也是通过码字来让自己在空闲时间忙起来不能沉迷于游戏。</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="最后">最后<a class="hash-link" href="#最后" title="Direct link to heading">​</a></h2><p>今天是2022.8.18日，博客网站还没有搭建起来，之后会把这个网站部署到云服务器上，同时自己也会把搭建博客的流程和部署到云服务器的流程都记录下来的。尽情期待！</p>]]></content>
         <author>
             <name>刘天</name>
+            <email>skyler151096@gmail.com</email>
             <uri>https://github.com/Skylerliutian</uri>
         </author>
         <category label="闲言碎语" term="闲言碎语"/>
