@@ -8,18 +8,17 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Skyler's Blog",
   tagline: "Dinosaurs are cool",
-  url: "https://Skylerliutian.github.io",
-  baseUrl: "/",
+  url: "https://Skylerliutian.github.io/",
+  baseUrl: "/skyler-blog/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
+  trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "Skylerliutian", // Usually your GitHub org/user name.
   projectName: "skyler-blog", // Usually your repo name.
-  trailingSlash: false,
-  //   deploymentBranch: ''
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -42,9 +41,6 @@ const config = {
           // blogSidebarTitle: '最近文章',
           // blogSidebarCount: 0,
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -52,21 +48,21 @@ const config = {
       }),
     ],
   ],
-  plugins: [
-    [
-      "@docusaurus/plugin-content-blog",
-      {
-        id: "secret-garden",
-        routeBasePath: "demoblog",
-        path: "./demoblog",
-        feedOptions: {
-          type: "all",
-          title: "峰华前端工程师",
-          copyright: `Copyright © ${new Date().getFullYear()} 峰华 (张旭乾) Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" >冀ICP备14007097号-3</a></p>`,
-        },
-      },
-    ],
-  ],
+  //   plugins: [
+  //     [
+  //       "@docusaurus/plugin-content-blog",
+  //       {
+  //         id: "secret-garden",
+  //         routeBasePath: "demoblog",
+  //         path: "./demoblog",
+  //         feedOptions: {
+  //           type: "all",
+  //           title: "峰华前端工程师",
+  //           copyright: `Copyright © ${new Date().getFullYear()} 峰华 (张旭乾) Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" >冀ICP备14007097号-3</a></p>`,
+  //         },
+  //       },
+  //     ],
+  //   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -164,8 +160,7 @@ const config = {
       // 公告栏
       announcementBar: {
         id: "support_us",
-        content:
-          'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
+        content: "welcome to my blog",
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: true,

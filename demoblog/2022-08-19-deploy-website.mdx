@@ -1,0 +1,47 @@
+---
+slug: deploy-website
+title: Docusaurus 发布网站
+authors: skyler
+tags: [网站搭建, 技术]
+---
+
+上篇文章介绍了使用 Docusaurus 搭建一个属于自己的博客网站，本篇主要介绍一下，如何发布网站
+
+## 发布到 Github Pages
+
+1. 配置文件中修改
+
+```shell
+// docusaurus.config.js
+module.exports = {
+  // ...
+  url: 'https://endiliey.github.io', // 你的网站 URL
+  baseUrl: '/',
+  projectName: 'endiliey.github.io',   // github 仓库名称
+  organizationName: 'endiliey',   // gitHub 用户名
+  trailingSlash: false,
+  // ...
+};
+```
+
+> 每个 GitHub 仓库都关联有一个 GitHub Pages 服务。 如果部署仓库叫作 my-org/my-project（my-org 是组织名或用户名），那么网站会被部署在 https://my-org.github.io/my-project/ 处。 特别地，如果部署仓库叫作 my-org/my-org.github.io（也就是 组织 GitHub Pages 仓库），那么网站会被部署在 https://my-org.github.io/。
+
+注意：👆 提到的，如果仓库的名称不是 `my-org.github.io` 的话，配置文件中的 `baseUrl` 设置成为 `/my-project/` 否则会出现样式丢失的问题。
+:::caution
+GitHub Pages 默认为 Docusaurus 网址链接添加末尾斜杠。 建议设置 trailingSlash（true 或 false 都可以，只要不是 undefined）。
+:::
+
+2. 执行命令
+
+```shell
+// 如果git仓库是通过ssh方式连接到远程仓库的
+yarn deploy
+
+// 如果是通过https方式连接到远程仓库的，用于推送部署文件的 GitHub 账户用户名，需要有部署仓库的推送权限。 对于你自己的仓库，这一般会是你自己的 GitHub 用户名。 不使用 SSH 时必填，使用 SSH 时则会被忽略。
+GIT_USER=<GITHUB_USERNAME> yarn deploy
+```
+
+3. 发布成功
+   访问 https://endiliey.github.io 即可看到网站。
+
+4. 使用 Github Actions 实现自动部署

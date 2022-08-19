@@ -2,7 +2,7 @@
 slug: create-own-blog-website
 title: Docusaurus搭建博客网站
 authors: skyler
-tags: [网站搭建，技术]
+tags: [网站搭建, 技术]
 ---
 
 大概是 2020 年因为疫情，只能在家上网课，空余时间很多，就使用 wordpress + 阿里云服务器搭建了一个博客网站，但是因为自制力不强，把网站搭建起来之后也就没有管理过了，直到去年域名过期了，再加上工作之后积累的一些经验和知识都被零散化的记录在了本地电脑上，所以这又萌生出了搭建一个个人博客网站的念头。用这个博客记录一下自己使用 Docusaurus 搭建博客网站的过程，以及搭建博客网站的步骤。当然采用 Docusaurus 的另一个原因也是在 B 站上看到了 UP 主 [峰华前端工程师](https://www.bilibili.com/video/BV1uE411x7mE?) 的这个视频。
