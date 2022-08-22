@@ -36,7 +36,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: "22"
           script: |
-            ll
+            pwd
 
       # 将打包好的产物
       # - name: Restart server # 第三步，重启服务
