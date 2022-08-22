@@ -24,7 +24,7 @@ jobs:
       #   run: |
       #     yarn install
       #     yarn build
-      - name: 123
+      - name: test
         run: |
           chmod 777 ./blog
           ls -l
