@@ -15,26 +15,22 @@ jobs:
     steps: # 自动化步骤
       - uses: actions/checkout@v2 # 第一步，下载代码仓库
 
-      # - name: Set up node Env
-      #   uses: actions/setup-node@v2
-      #   with:
-      #     node-version: "16"
-      #     cache: "yarn"
-      # - name: build website
-      #   run: |
-      #     yarn install
-      #     yarn build
-      - name: test
+      - name: Set up node Env
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          cache: "yarn"
+      - name: build website
         run: |
-          chmod 777 ./blog
-          ls -l
+          yarn install
+          yarn build
 
       - name: Deploy to Staging server
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
           ARGS: "-rltgoDzvO"
-          SOURCE: "blog/"
+          SOURCE: "build/"
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: ${{ secrets.SSH_USERNAME }}
           TARGET: /root/skyler-blog-website
