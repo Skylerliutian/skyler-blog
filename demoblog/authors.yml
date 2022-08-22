@@ -3,5 +3,6 @@ skyler:
   title: 前端工程师
   url: https://github.com/Skylerliutian
   # 图床地址 后续更换为自己的 TODO
-  image_url: https://s1.ax1x.com/2022/08/19/vsp7kV.jpg
+  # 2022/08/22 更换为github图床地址
+  image_url: https://cdn.jsdelivr.net/gh/Skylerliutian/oss-img@main/uPic/2022-08-22-10-IMG_4602-2kBpbF.JPG
   email: skyler151096@gmail.com
