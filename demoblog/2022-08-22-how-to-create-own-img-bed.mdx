@@ -1,0 +1,37 @@
+---
+slug: how-to-create-own-img-bed
+title: uPic + github 搭建图床
+authors: skyler
+tags: [技术]
+---
+
+这篇文章主要是记录一下使用 uPic 和 github 搭建属于自己的图床。
+
+> 图床就是将你的本地图片上传到相关服务商或者个人服务器，然后获取图片对应的网络访问地址，使用者可以方便快速的将图片插入到文章中，后续图片二次使用、迁移、分享都会非常简单。
+
+将图片上传到图床，写文章时只需要添加图片的网络地址即可。这样节省了本地的存储空间，也方便了管理。
+
+<!-- truncate -->
+
+## github 配置
+
+![](https://cdn.jsdelivr.net/gh/Skylerliutian/oss-img@main/uPic/2022-08-22-19-0R4Bdw-Rbjug4.png)
+
+新建一个代码仓库，添加基本信息
+:::note
+注意仓库权限一定要设置为 public
+:::
+
+## uPic 配置
+
+1. 下载 [uPic](https://github.com/gee1k/uPic)
+2. 配置
+   ![](https://cdn.jsdelivr.net/gh/Skylerliutian/oss-img@main/uPic/2022-08-22-19-AFK16C-ct4S5T.png)
+   按照图片说明进行配置。
+   github token [配置地址](https://github.com/settings/tokens):
+   ![](https://cdn.jsdelivr.net/gh/Skylerliutian/oss-img@main/uPic/2022-08-22-19-STjgGx-NpXXJY.png)
+   勾选 `repo` 权限，点击 `Generate token`，获取 token
+   :::note
+   注意复制 token, token 只在创建完成之后展示一次，否则就要重新生成 token 了。
+   :::
+3. 可以配置 剪切板上传 的快捷键，这样可以结合 微信截图(可以在图片上添加文字等) + 剪切板上传，只需要两个快捷键实现快捷操作。
