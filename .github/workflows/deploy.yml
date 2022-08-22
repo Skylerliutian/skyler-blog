@@ -28,38 +28,15 @@ jobs:
         run: |
           chmod 777 ./blog
           ls -l
-      - name: 上传文件到远程服务器 test
-        uses: zhenyuWang/Upload-File-Action@v1.0.1
-        with:
-          username: ${{ secrets.SSH_USERNAME }}
-          server: ${{ secrets.SSH_HOST }}
-          port: "22"
-          ssh_private_key: ${{ secrets.DEPLOY_KEY }}
-          # 要上传文件所在目录
-          local_path: "./blog/*"
-          # 远程服务器目标路径
-          target_path: "/root/"
 
-      # - name: Deploy to Server # 第二步，rsync推文件
-      #   uses: AEnterprise/rsync-deploy@v1.0 # 使用别人包装好的步骤镜像
-      #   env:
-      #     DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }} # 引用配置，SSH私钥
-      #     ARGS: -avz --delete --exclude='*.pyc' # rsync参数，排除.pyc文件
-      #     SERVER_PORT: 22 # SSH端口
-      #     FOLDER: ./blog/ # 要推送的文件夹，路径相对于代码仓库的根目录
-      #     SERVER_IP: ${{ secrets.SSH_HOST }} # 引用配置，服务器的host名（IP或者域名domain.com）
-      #     USERNAME: ${{ secrets.SSH_USERNAME }} # 引用配置，服务器登录名
-      #     SERVER_DESTINATION: /root/skyler-blog-website # 部署到目标文件夹
-      # - name: Deploy
-      #   uses: easingthemes/ssh-deploy@main
-      #   env:
-      #     SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
-      #     ARGS: "-rltgoDzvO"
-      #     SOURCE: "blog/"
-      #     REMOTE_HOST: ${{ secrets.SSH_HOST }}
-      #     REMOTE_USER: ${{ secrets.SSH_USERNAME }}
-      #     TARGET: /root/skyler-blog-website
-      #     EXCLUDE: "/dist/, /node_modules/"
+      - uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: "22"
+          script: |
+            ll
 
       # 将打包好的产物
       # - name: Restart server # 第三步，重启服务
