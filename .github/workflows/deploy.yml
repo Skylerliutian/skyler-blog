@@ -28,7 +28,7 @@ jobs:
         run: |
           chmod 777 ./blog
           ls -l
-      - name: 上传文件到远程服务器
+      - name: 上传文件到远程服务器 test
         uses: zhenyuWang/Upload-File-Action@v1.0.1
         with:
           username: ${{ secrets.SSH_USERNAME }}
