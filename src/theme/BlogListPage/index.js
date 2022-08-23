@@ -19,7 +19,7 @@ import BlogListPaginator from '@theme/BlogListPaginator';
 import SearchMetadata from '@theme/SearchMetadata';
 import BlogPostItems from '@theme/BlogPostItems';
 
-function BlogListPageMetadata(props) {
+const BlogListPageMetadata = (props) => {
     const { metadata } = props;
     const {
         siteConfig: { title: siteTitle },
@@ -35,14 +35,27 @@ function BlogListPageMetadata(props) {
     );
 }
 
-function BlogListPageContent(props) {
+const BlogListPageContent = (props) => {
     const { metadata, items, sidebar } = props;
     return (
-        <BlogLayout sidebar={sidebar}>
-            <BlogPostItems items={items} />
-            <BlogListPaginator metadata={metadata} />
-        </BlogLayout>
+        <>
+
+            <BlogLayout sidebar={sidebar}>
+                <HomeHeader />
+
+                <BlogPostItems items={items} />
+                <BlogListPaginator metadata={metadata} />
+            </BlogLayout>
+        </>
     );
+}
+
+const HomeHeader = () => {
+    return (
+        <div>
+            header part
+        </div>
+    )
 }
 
 export default function BlogListPage(props) {
