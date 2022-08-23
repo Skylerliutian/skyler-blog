@@ -36,7 +36,8 @@ jobs:
           TARGET: /root/skyler-blog-website
           EXCLUDE: "/dist/, /node_modules/"
 
-      # 将打包好的产物
+      # 我直接将打包好的产物，上传给服务器即可，如果还需要在服务器上执行其他命令的话，配置下面的流程即可
+
       # - name: Restart server # 第三步，重启服务
       #   uses: appleboy/ssh-action@master
       #   with:

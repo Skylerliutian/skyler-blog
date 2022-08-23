@@ -1,0 +1,109 @@
+---
+slug: github-actions-deploy-website
+title: github actions自动部署网站
+authors: skyler
+tags: [技术]
+---
+
+如果大家用过静态博客，比如 hexo，可能接触过自动部署，提交代码到主分支之后，会自动打包生成静态文件并且提交到静态代码的分支。
+
+我的这个博客网站是放在了远程服务器上面，所以涉及到了服务器的远程登录，并把打包好的静态文件上传到服务器上。一开始我的部署流程有两种：
+
+1. 本地手动打包，将打包好的静态文件通过 `scp` 命令上传到服务器 nginx 配置中指定文件夹即可。
+2. 服务器上拉一个仓库，本地代码提交之后，服务器上拉取最新的代码，然后再打包即可。
+
+这两种方法本质上都是一样的，都免不了手动和服务器进行交流。那么这篇文章我会把我配置 github actions 实现本地提交代码，自动部署到服务器的流程。
+
+<!-- truncate -->
+
+## 创建自动化文件
+
+首先在仓库根目录下创建 `.github/workflows/` 文件夹，然后在文件夹下创建，`deploy.yml` 文件，文件名称自定义即可。
+
+## 编写工作流文件
+
+如下配置
+
+```yml
+name: Deploy Skyler's Blog
+
+on:
+  push:
+    branches:
+      - master # 只在master上push触发部署
+    paths-ignore: # 下列文件的变更不触发部署，可以自行添加
+      - README.md
+      - LICENSE
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # 使用ubuntu系统镜像运行自动化脚本
+
+    steps: # 自动化步骤
+      - uses: actions/checkout@v2 # 第一步，下载代码仓库
+
+      - name: Set up node Env # 第二步，准备node环境
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16" # 选择合适的node版本
+          cache: "yarn"
+      - name: build website
+        run: | # 编写要执行的脚本(我这里只是打包)
+          yarn install          
+          yarn build
+
+      - name: Deploy to Staging server # 将打包好的文件上传到服务器
+        uses: easingthemes/ssh-deploy@main # 使用别人的镜像，可以在github marketplace上自行搜索，选择star多的
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
+          ARGS: "-rltgoDzvO"
+          SOURCE: "build/"
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USERNAME }}
+          TARGET: /root/skyler-blog-website
+          EXCLUDE: "/dist/, /node_modules/"
+
+      # 我直接将打包好的产物，上传给服务器即可，如果还需要在服务器上执行其他命令的话，配置下面的流程即可
+
+      # - name: Restart server # 第三步，重启服务
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: ${{ secrets.SSH_HOST }} # 下面三个配置与上一步类似
+      #     username: ${{ secrets.SSH_USERNAME }}
+      #     key: ${{ secrets.DEPLOY_KEY }}
+      #     # 重启的脚本，根据自身情况做相应改动，一般要做的是migrate数据库以及重启服务器
+      #     script: |
+      #       cd /home/fming/mysite/
+      #       python manage.py migrate
+      #       supervisorctl restart web
+```
+
+## 文件中变量的配置
+
+![](https://cdn.jsdelivr.net/gh/Skylerliutian/oss-img@main/uPic/2022-08-23-11-pV4M3V-LF3Xxr.png)
+如上图所示，找到网站仓库 -> `setting` -> 左下 `Secrets` -> `New repository secret`
+
+1. `DEPLOY_KEY`
+   服务器上面的私钥
+   :::note
+   这里的私钥生成方式建议看一下自己使用的 ssh 上传文件的镜像的文档，有没有指定的私钥生成方式，否则会出现 `permission denied` 的问题。easingthemes
+   我使用的是 `/ssh-deploy@main` 在[github marketplace](https://github.com/marketplace?type=) 搜索，进入主页
+   ![](https://cdn.jsdelivr.net/gh/Skylerliutian/oss-img@main/uPic/2022-08-23-11-4WUwRr-5qIQj0.png)
+   可以看到这里说明了私钥的生成方式。也可以看一下其他字段的配置以及说明。
+   :::
+
+2. `SSH_USERNAME`
+   服务器的用户名
+
+3. `SSH_HOST`
+   服务器的 ip
+
+## 触发方式
+
+最后大家在写完博客后，上传代码到 git 仓库，就会自动触发并且部署到服务器上了。
+![](https://cdn.jsdelivr.net/gh/Skylerliutian/oss-img@main/uPic/2022-08-23-11-TQVN6d-t4F9gG.png)
+图片上出现 ✅，就表示本次的部署成功了，如果失败了，去 actions 中查看具体的报错信息，按照错误信息进行修改。
+
+## 最后
+
+以上就是 github acitons 自动化部署的基本配置了，可以根据自己项目的打包方式和部署方式，进行工作流文件的其它配置。当然 github actions 还可以做更多的有意思的事情，比如掘金自动签到，自动收集 bug 等等，更多有意思的还等待着大家探索！
