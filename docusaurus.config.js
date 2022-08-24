@@ -40,7 +40,7 @@ const config = {
           routeBasePath: "/",
           // showReadingTime: true,
           // blogSidebarTitle: '最近文章',
-          // blogSidebarCount: 0,
+          blogSidebarCount: 0,
           // Please change this to your repo.
         },
         theme: {
