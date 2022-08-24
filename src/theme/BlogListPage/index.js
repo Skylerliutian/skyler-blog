@@ -20,6 +20,10 @@ import SearchMetadata from "@theme/SearchMetadata";
 import BlogPostItems from "@theme/BlogPostItems";
 
 import HomePageImg from "./img/homepage.png";
+import Layout from '@theme/Layout';
+import Head from "@docusaurus/Head";
+
+
 
 const BlogListPageMetadata = (props) => {
   const { metadata } = props;
@@ -40,14 +44,10 @@ const BlogListPageMetadata = (props) => {
 const BlogListPageContent = (props) => {
   const { metadata, items, sidebar } = props;
   return (
-    <>
-      <BlogLayout sidebar={sidebar}>
-        <HomeHeader />
-
+    <div style={{margin: '0 20%'}}>
         <BlogPostItems items={items} />
         <BlogListPaginator metadata={metadata} />
-      </BlogLayout>
-    </>
+    </div>
   );
 };
 
@@ -62,14 +62,31 @@ const HomeHeader = () => {
 
 export default function BlogListPage(props) {
   return (
-    <HtmlClassNameProvider
-      className={clsx(
-        ThemeClassNames.wrapper.blogPages,
-        ThemeClassNames.page.blogListPage
-      )}
+    // <HtmlClassNameProvider
+    //   className={clsx(
+    //     ThemeClassNames.wrapper.blogPages,
+    //     ThemeClassNames.page.blogListPage
+    //   )}
+    // >
+    //   <BlogListPageMetadata {...props} />
+    //   <HomeHeader />
+
+    //   <BlogListPageContent {...props} />
+    // </HtmlClassNameProvider>
+    <Layout
+        title={`1233`}
+        description={`12331`}
+        wrapperClassName="blog-list__page"    
     >
-      <BlogListPageMetadata {...props} />
-      <BlogListPageContent {...props} />
-    </HtmlClassNameProvider>
+        <Head>
+            <meta
+            name="keywords"
+            content="前端, html, css, js, javascript, react, vue, typescript, es6, html5, css3, 性能优化, 兼容性调整"
+            />
+            <title>12341234</title>
+        </Head>
+        <HomeHeader />
+        <BlogListPageContent {...props} />
+    </Layout>
   );
 }
