@@ -19,11 +19,9 @@ import BlogListPaginator from "@theme/BlogListPaginator";
 import SearchMetadata from "@theme/SearchMetadata";
 import BlogPostItems from "@theme/BlogPostItems";
 
-import HomePageImg from "./img/homepage.png";
-import Layout from '@theme/Layout';
+import IntroPart from "@site/src/components/IntroPart";
+import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
-
-
 
 const BlogListPageMetadata = (props) => {
   const { metadata } = props;
@@ -44,18 +42,9 @@ const BlogListPageMetadata = (props) => {
 const BlogListPageContent = (props) => {
   const { metadata, items, sidebar } = props;
   return (
-    <div style={{margin: '0 20%'}}>
-        <BlogPostItems items={items} />
-        <BlogListPaginator metadata={metadata} />
-    </div>
-  );
-};
-
-const HomeHeader = () => {
-  return (
-    <div className="home-header">
-      <div>wer</div>
-      <img src={HomePageImg} />
+    <div style={{ margin: "0 20%" }}>
+      <BlogPostItems items={items} />
+      <BlogListPaginator metadata={metadata} />
     </div>
   );
 };
@@ -74,19 +63,19 @@ export default function BlogListPage(props) {
     //   <BlogListPageContent {...props} />
     // </HtmlClassNameProvider>
     <Layout
-        title={`1233`}
-        description={`12331`}
-        wrapperClassName="blog-list__page"    
+      title={`1233`}
+      description={`12331`}
+      wrapperClassName="blog-list__page"
     >
-        <Head>
-            <meta
-            name="keywords"
-            content="前端, html, css, js, javascript, react, vue, typescript, es6, html5, css3, 性能优化, 兼容性调整"
-            />
-            <title>12341234</title>
-        </Head>
-        <HomeHeader />
-        <BlogListPageContent {...props} />
+      <Head>
+        <meta
+          name="keywords"
+          content="前端, html, css, js, javascript, react, vue, typescript, es6, html5, css3, 性能优化, 兼容性调整"
+        />
+        <title>12341234</title>
+      </Head>
+      <IntroPart />
+      <BlogListPageContent {...props} />
     </Layout>
   );
 }

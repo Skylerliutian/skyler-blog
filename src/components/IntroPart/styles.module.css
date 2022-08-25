@@ -1,0 +1,59 @@
+.introPart {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.bgImg {
+  width: 542px;
+}
+
+.cssImg {
+  position: absolute;
+  left: 30px;
+  width: 122px;
+  left: -40px;
+  top: 110px;
+  animation: drift 2s linear infinite;
+}
+
+.htmlImg {
+  position: absolute;
+  width: 121px;
+  bottom: -60px;
+  right: 60px;
+}
+
+.gearImg {
+  position: absolute;
+  width: 71px;
+  height: 71px;
+  top: 142px;
+  right: 215px;
+  animation: rotation 3s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes drift {
+  25% {
+    transform: translateY(-10px);
+  }
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+}
