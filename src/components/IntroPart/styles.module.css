@@ -1,9 +1,20 @@
 .introPart {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 60px;
+  justify-content: center;
+  margin: 20px 20px 100px 20px;
+  position: relative;
+}
+.introText {
+  margin: auto;
+}
+.intro__attentiontext {
+  font-size: calc(1.8em + 1.2vw);
+  font-weight: 600;
 }
 
+.intro__name {
+  color: var(--ifm-color-primary);
+}
 .imgContainer {
   position: relative;
 }
