@@ -5,7 +5,8 @@
   position: relative;
 }
 .introText {
-  margin: auto;
+  /* margin: auto; */
+  transform: translateY(50%) translateX(-20%);
 }
 .intro__attentiontext {
   font-size: calc(1.8em + 1.2vw);
@@ -15,8 +16,10 @@
 .intro__name {
   color: var(--ifm-color-primary);
 }
+
 .imgContainer {
   position: relative;
+  transform: translateX(20%);
 }
 
 .bgImg {
@@ -67,4 +70,24 @@
   75% {
     transform: translateY(10px);
   }
+}
+
+.social__links {
+  width: 100%;
+  display: flex;
+  max-width: 210px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 0 2.5em 0;
+  z-index: 100;
+  position: relative;
+  margin: auto;
+}
+.social__links > *,
+.social__links svg,
+.social__links svg path {
+  width: 24px;
+  height: 24px;
+  color: var(--ifm-color-primary);
+  fill: var(--ifm-color-primary);
 }

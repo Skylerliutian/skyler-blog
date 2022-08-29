@@ -1,51 +1,54 @@
 import React from "react";
-import { useTrail } from "react-spring";
+import { useTrail, animated } from "react-spring";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faWeixin } from "@fortawesome/free-brands-svg-icons";
 
 import BGImg from "./img/bg-img.svg";
 import CSSImg from "./img/css.svg";
 import HTMLImg from "./img/html.svg";
 import GearImg from "./img/gear.svg";
+import BilibiliIcon from "./img/bilibili.svg";
 import styles from "./styles.module.css";
 
-// function SocialLinks({ animatedProps, ...props }) {
-//   // const { isDarkTheme } = useThemeContext();
-//   return (
-//     <animated.div className={styles.social__links} style={animatedProps}>
-//       <a href="https://space.bilibili.com/302954484">
-//         <BilibiliIcon />
-//       </a>
-//       <a href="https://www.linkedin.com/in/zxuqian/">
-//         <FontAwesomeIcon icon={faLinkedin} size="lg" />
-//       </a>
-//       <a href="https://github.com/zxuqian">
-//         <FontAwesomeIcon icon={faGithub} size="lg" />
-//       </a>
-//       <a href="https://blog.csdn.net/fengqiuzhihua">
-//         <CSDNIcon />
-//       </a>
-//       <div className={`dropdown ${styles.dropdown} dropdown--hoverable`}>
-//         <FontAwesomeIcon icon={faWeixin} size="lg" />
-//         <img
-//           width="50%"
-//           className={`dropdown__menu ${styles.dropdown__menu}`}
-//           src={useBaseUrl("/img/publicQR.webp")}
-//         />
-//       </div>
-//     </animated.div>
-//   );
-// }
+function SocialLinks({ animatedProps, ...props }) {
+  // const { isDarkTheme } = useThemeContext();
+  return (
+    <animated.div className={styles.social__links} style={animatedProps}>
+      <a href="https://space.bilibili.com/231771308">
+        <BilibiliIcon />
+      </a>
+      <a href="https://github.com/Skylerliutian">
+        <FontAwesomeIcon icon={faGithub} size="lg" />
+      </a>
+      <a>
+        <FontAwesomeIcon icon={faWeixin} size="lg" />
+      </a>
+    </animated.div>
+  );
+}
 
 const IntroPart = () => {
+  const animatedTexts = useTrail(2, {
+    from: { opacity: 0, transform: "translateY(3em)" },
+    to: { opacity: 1, transform: "translateY(0)" },
+    config: {
+      mass: 3,
+      friction: 45,
+      tension: 460,
+    },
+  });
   return (
-    <div className={styles.introPart}>
+    <animated.div className={styles.introPart}>
       <div className={styles.introText}>
-        <div className={styles.intro__attentiontext}>
+        <animated.div
+          className={styles.intro__attentiontext}
+          style={animatedTexts[0]}
+        >
           <span>Hello! 我是</span>
           <span className={styles.intro__name}>skyler</span>
-        </div>
-        <div>记录生活，记录知识</div>
+        </animated.div>
 
-        {/* <SocialLinks animatedProps={animatedTexts[4]} /> */}
+        <SocialLinks animatedProps={animatedTexts[1]} />
       </div>
       <div className={styles.imgContainer}>
         <BGImg className={styles.bgImg} />
@@ -53,7 +56,7 @@ const IntroPart = () => {
         <HTMLImg className={styles.htmlImg} />
         <GearImg className={styles.gearImg} />
       </div>
-    </div>
+    </animated.div>
   );
 };
 
