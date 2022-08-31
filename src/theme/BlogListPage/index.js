@@ -50,6 +50,9 @@ const BlogListPageContent = (props) => {
 };
 
 export default function BlogListPage(props) {
+  const {
+    siteConfig: { title: siteTitle },
+  } = useDocusaurusContext();
   return (
     // <HtmlClassNameProvider
     //   className={clsx(
@@ -63,8 +66,8 @@ export default function BlogListPage(props) {
     //   <BlogListPageContent {...props} />
     // </HtmlClassNameProvider>
     <Layout
-      title={`1233`}
-      description={`12331`}
+      title={siteTitle}
+      description="html, css, javascript, react前端记录，一起学习吧。"
       wrapperClassName="blog-list__page"
     >
       <Head>
@@ -72,7 +75,7 @@ export default function BlogListPage(props) {
           name="keywords"
           content="前端, html, css, js, javascript, react, vue, typescript, es6, html5, css3, 性能优化, 兼容性调整"
         />
-        <title>12341234</title>
+        <title>{siteTitle}</title>
       </Head>
       <IntroPart />
       <BlogListPageContent {...props} />
