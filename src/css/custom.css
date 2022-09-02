@@ -31,3 +31,8 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+@font-face {
+  font-family: fontAwesome;
+  src: url(../../static/fonts/fa-brands-400.ttf);
+}

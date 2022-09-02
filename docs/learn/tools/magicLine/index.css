@@ -1,0 +1,55 @@
+.magic-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.magic-wrapper li {
+  position: relative;
+  list-style: none;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.magic-wrapper li .fa {
+  font-size: 4em;
+  stroke: var(--clr);
+  stroke-width: 8px;
+  /* text-shadow: 1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red; */
+  color: transparent;
+}
+.magic-wrapper li::before {
+  font-family: fontAwesome;
+  line-height: 100px;
+  font-size: 4em;
+  color: var(--clr);
+  text-align: center;
+  display: block;
+  position: absolute;
+  height: 0;
+  top: 0;
+  border-bottom: 4px solid var(--clr);
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+}
+.magic-wrapper li:nth-child(1):before {
+  content: "\f09b";
+}
+.magic-wrapper li:nth-child(2):before {
+  content: "\f1d7";
+}
+.magic-wrapper li:nth-child(3):before {
+  content: "\e3d9";
+}
+.magic-wrapper li:nth-child(4):before {
+  content: "\f167";
+}
+
+.magic-wrapper li:hover::before {
+  height: 100%;
+}

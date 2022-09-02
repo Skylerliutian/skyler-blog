@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Skyler's Blog",
   tagline: "Dinosaurs are cool",
-  url: "https://Skylerliutian.github.io/",
+  url: "https://skyler.ltd",
   // baseUrl: "/skyler-blog/",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -25,7 +25,7 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "zh-Hans",
     locales: ["en", "zh-Hans"],
   },
 
@@ -34,7 +34,13 @@ const config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: false,
+        docs: {
+          sidebarPath: require.resolve("./sidebars.js"),
+          showLastUpdateTime: true,
+
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+        },
         blog: {
           path: "./demoblog",
           routeBasePath: "/",
@@ -74,60 +80,22 @@ const config = {
           src: "img/logo.jpg",
         },
         items: [
-          // {
-          //     type: 'doc',
-          //     docId: 'intro',
-          //     position: 'left',
-          //     label: 'Tutorial',
-          // },
           { to: "/", label: "博客", position: "right" },
-          //   {
-          //     label: "首页",
-          //     position: "right",
-          //     to: "/demoblog",
-          //     items: [
-          //       {
-          //         label: "blog",
-          //         to: "demoblog",
-          //       },
-          //     ],
-          //   },
-
-          // {
-          //     type: 'localeDropdown',
-          //     position: 'right',
-          // },
+          {
+            label: "学习",
+            position: "right",
+            items: [
+              {
+                label: "小工具",
+                to: "docs/learn/css-intro",
+              },
+            ],
+          },
         ],
       },
       footer: {
         style: "dark",
         links: [
-          // {
-          //     title: 'Docs',
-          //     items: [
-          //         {
-          //             label: 'Tutorial',
-          //             to: '/docs/intro',
-          //         },
-          //     ],
-          // },
-          // {
-          //     title: 'Community',
-          //     items: [
-          //         {
-          //             label: 'Stack Overflow',
-          //             href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          //         },
-          //         {
-          //             label: 'Discord',
-          //             href: 'https://discordapp.com/invite/docusaurus',
-          //         },
-          //         {
-          //             label: 'Twitter',
-          //             href: 'https://twitter.com/docusaurus',
-          //         },
-          //     ],
-          // },
           {
             title: "社交媒体",
             items: [
