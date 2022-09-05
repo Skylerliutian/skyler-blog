@@ -2,6 +2,7 @@
 slug: create-own-blog-website
 title: Docusaurus搭建博客网站
 authors: skyler
+description: 创建属于自己的博客网站，docusaurus
 tags: [网站搭建, 技术]
 ---
 
