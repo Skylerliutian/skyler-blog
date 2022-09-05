@@ -127,13 +127,13 @@ const config = {
         respectPrefersColorScheme: false,
       },
       // 公告栏
-      announcementBar: {
-        id: "support_us",
-        content: "welcome to my blog",
-        backgroundColor: "#fafbfc",
-        textColor: "#091E42",
-        isCloseable: true,
-      },
+      // announcementBar: {
+      //   id: "support_us",
+      //   content: "welcome to my blog",
+      //   backgroundColor: "#fafbfc",
+      //   textColor: "#091E42",
+      //   // isCloseable: true,
+      // },
     }),
 };
 
