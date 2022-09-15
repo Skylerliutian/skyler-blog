@@ -31,7 +31,12 @@ const sidebars = {
   // },
   learn: [
     "learn/css-intro",
-    { CSS炫酷效果集合: ["learn/tools/magicLine/magic-line"] },
+    {
+      CSS炫酷效果集合: [
+        "learn/tools/magicLine/magic-line",
+        "learn/tools/swingButton/swing-button",
+      ],
+    },
   ],
   // learn: [
   //   {

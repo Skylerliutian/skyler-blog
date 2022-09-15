@@ -2,7 +2,10 @@
 slug: git-rebase-command
 title: 巧用 git rebase 命令
 authors: skyler
-keywords: git rebase, commit
+keywords:
+  - git
+  - rebase
+  - commit
 description: 使用git rebase 命令，让你的commit变得整洁
 tags: [git, 技术]
 ---

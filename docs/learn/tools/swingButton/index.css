@@ -1,0 +1,81 @@
+.body {
+  /* 添加透视 */
+  perspective: 500px;
+}
+
+.button-wrapper {
+  width: 280px;
+  height: 80px;
+  background-color: #e2e6eb;
+  border-radius: 10px;
+  box-shadow: -10px -10px 15px #f5f9fd, 10px 10px 15px #d8dbe5;
+  position: relative;
+  overflow: hidden;
+  /* 添加转换原点 */
+  /* 动态修改原点 */
+  transform-origin: var(--wraper-origin);
+  transition: transform 0.4s cubic-bezier(0, 0, 0.48, 1);
+  margin: 30px;
+}
+
+.rotate-wrap {
+  transform: rotateY(var(--rotate-deg));
+}
+
+.button-wrapper::before {
+  position: absolute;
+  content: "";
+  left: var(--left);
+  top: 12px;
+  width: calc(50% - 16px - 8px);
+  height: calc(100% - 24px);
+  border-radius: 10px;
+  box-shadow: inset 8px 8px 6px #d9dce6, inset -5px -5px 15px #f5f9fd,
+    inset -5px -5px 15px #f5f9fd, inset 7px 7px 6px #d9dce6;
+  transition: left 1s cubic-bezier(0.82, 0.12, 0.18, 0.88);
+}
+
+.btn {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  /* padding: inherit; */
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  /* animation: textLeave 0.6s linear; */
+}
+
+.active {
+  color: #111;
+  transform: scale(1.1);
+  /* animation: textEnter 0.4s linear; */
+}
+
+@keyframes textEnter {
+  0% {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes textLeave {
+  0% {
+    transform: scale(1.1);
+  }
+
+  90% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
