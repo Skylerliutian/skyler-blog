@@ -22,6 +22,10 @@
   /* text-shadow: 1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red; */
   color: transparent;
 }
+
+/* 使用unicode 需要先导入font-awesome字体，官网下载 
+    https://fontawesome.com/download
+*/
 .magic-wrapper li::before {
   font-family: fontAwesome;
   line-height: 100px;
