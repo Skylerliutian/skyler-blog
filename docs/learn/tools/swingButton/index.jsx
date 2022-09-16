@@ -21,7 +21,7 @@ const SwingButton = () => {
         className={`button-wrapper ${rotate ? "rotate-wrap" : ""}`}
         style={{
           "--left": `${left}`,
-          "--rotate-deg": current === 0 ? "-10deg" : "10deg",
+          "--rotate-deg": current === 0 ? "-10deg" : "20deg",
           "--wraper-origin": current === 0 ? "75% top" : "25% top",
         }}
       >
