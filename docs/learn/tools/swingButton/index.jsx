@@ -21,6 +21,7 @@ const SwingButton = () => {
         className={`button-wrapper ${rotate ? "rotate-wrap" : ""}`}
         style={{
           "--left": `${left}`,
+          // 这里的倾斜角度，根据视觉自己调整
           "--rotate-deg": current === 0 ? "-10deg" : "20deg",
           "--wraper-origin": current === 0 ? "75% top" : "25% top",
         }}
