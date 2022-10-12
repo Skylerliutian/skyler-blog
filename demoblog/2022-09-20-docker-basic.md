@@ -12,6 +12,8 @@ tags: [docker, 技术]
 
 最近工作中，有一个项目的部署方式是通过 docker 进行部署，借此机会也来学习并记录一下 docker 相关的基础知识。
 
+<!-- truncate -->
+
 ## Dockerfile 的编写
 
 以前端的一个项目为例，将打包后的产物复制进镜像中，更改 nginx 配置，暴露端口并映射到宿主机的某个端口，然后进行访问
@@ -114,6 +116,14 @@ services:
     ports:
       - "8081:80"
     restart: always
+```
+
+关于 docker-compose.yml 的编写还有很多关键词，
+
+```yml
+# depends_on  此镜像依赖于哪一个镜像
+# environment  环境变量
+# networks 网络
 ```
 
 ```shell
