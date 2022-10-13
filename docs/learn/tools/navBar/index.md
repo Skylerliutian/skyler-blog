@@ -14,4 +14,4 @@ ps: 效果大概如上，图标没有显示在圆圈中，可能是因为样式�
 
 ## 源码
 
-源码这里 👉 https://github.com/Skylerliutian/css-demos/blob/main/src/components/magicLine.jsx
+源码这里 👉 https://github.com/Skylerliutian/css-demos/blob/main/src/components/navbar1.jsx

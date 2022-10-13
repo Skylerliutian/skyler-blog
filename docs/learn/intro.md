@@ -19,3 +19,5 @@ CSS 炫酷效果都是在国内外视频网站或者社区刷到的，自己实�
 
 1. [magic line](/docs/learn/tools/magic-line)
 2. [swing button](/docs/learn/tools/swing-button)
+3. [navbar](/docs/learn/tools/navbar)
+4. [shake effect](/docs/learn/tools/shake-effect)
