@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Input } from "antd";
 import "./index.css";
+import Input from "antd/es/input";
+// FIXME: antd样式会冲突
+// import "antd/es/input/style/css";
 
 const ShakeEffect = () => {
   const [shake, setShake] = useState(false);
