@@ -5,7 +5,7 @@ authors: skyler
 keywords:
   - docker
 description: docker基础命令学习
-tags: [docker, 技术]
+tags: [docker, 技术, 部署]
 ---
 
 ## 简介
