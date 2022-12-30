@@ -1,0 +1,28 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.blogPostFooterDetailsFull {
+  flex-direction: column;
+}
+
+.readmore {
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    90deg,
+    var(--ifm-color-primary) 11.3%,
+    var(--ifm-color-primary-light) 161.54%
+  );
+  box-shadow: 0 0 10px var(--ifm-color-primary-light);
+}
+.readmore b {
+  color: white;
+}

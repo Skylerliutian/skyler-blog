@@ -29,7 +29,7 @@ function SocialLinks({ animatedProps, ...props }) {
 
 const IntroPart = () => {
   const animatedTexts = useTrail(2, {
-    from: { opacity: 0, transform: "translateY(200px)" },
+    from: { opacity: 0.3, transform: "translateY(200px)" },
     to: { opacity: 1, transform: "translateY(0)" },
     config: {
       mass: 10,

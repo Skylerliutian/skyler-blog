@@ -1,9 +1,7 @@
 ---
 slug: json-stringify
 title: JSON.stringify
-author: skyler
-author_title: 前端工程师
-author_url: https://github.com/Skylerliutian
+authors: skyler
 tags: [前端]
 ---
 

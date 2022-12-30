@@ -1,0 +1,9 @@
+.postitem {
+  margin-bottom: 80px;
+  border-radius: 10px;
+  padding: 20px;
+  background: linear-gradient(50deg, #fff, #f2f2f2);
+  box-shadow: 20px 20px 60px #ced1d6, -20px -20px 60px #fff;
+  display: grid;
+  grid-template-columns: 200px auto;
+}

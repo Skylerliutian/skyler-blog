@@ -7,17 +7,22 @@
 /* You can override the default Infima variables here. */
 :root {
   /* --ifm-color-primary: hsl(214deg, 100%, 60%); */
-  --ifm-color-primary: #2e8555;
+  --ifm-color-primary: hsl(214deg, 100%, 60%);
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-light: hsl(214deg, 100%, 80%);
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
-  --ifm-background-color: aliceblue;
-  --ifm-background-surface-color: aliceblue;
+  --ifm-background-color: #fafafa;
+  --ifm-background-surface-color: #fafafa;
+  --ifm-link-color: #1890ff;
+  --ifm-heading-color: #0a274d;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: "Raleway", "PingFang SC", "Microsoft Yahei",
+    sans-serif;
+  color: hsl(214deg 37% 25%);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */

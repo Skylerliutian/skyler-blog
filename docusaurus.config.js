@@ -80,7 +80,7 @@ const config = {
           src: "img/logo.jpg",
         },
         items: [
-          { to: "/", label: "博客", position: "right" },
+          { to: "/", label: "首页", position: "right" },
           {
             label: "学习",
             position: "right",

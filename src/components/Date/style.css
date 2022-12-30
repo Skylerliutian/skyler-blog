@@ -1,0 +1,25 @@
+.post-item-date {
+  height: 10.5em;
+  width: 10.5em;
+  border-radius: 10px;
+  overflow: hidden;
+}
+/* 42 126 */
+.month {
+  height: 42px;
+  font-size: 2rem;
+  font-weight: 400;
+  background-color: #e26155;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.day {
+  height: 126px;
+  background-color: #f5f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 7rem;
+}

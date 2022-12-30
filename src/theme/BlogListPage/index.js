@@ -18,10 +18,13 @@ import BlogLayout from "@theme/BlogLayout";
 import BlogListPaginator from "@theme/BlogListPaginator";
 import SearchMetadata from "@theme/SearchMetadata";
 import BlogPostItems from "@theme/BlogPostItems";
+import BlogPostItem from "@theme/BlogPostItem";
 
 import IntroPart from "@site/src/components/IntroPart";
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
+import Date from "@site/src/components/Date";
+import "./style.css";
 
 const BlogListPageMetadata = (props) => {
   const { metadata } = props;
@@ -42,8 +45,19 @@ const BlogListPageMetadata = (props) => {
 const BlogListPageContent = (props) => {
   const { metadata, items, sidebar } = props;
   return (
-    <div style={{ margin: "0 20%" }}>
-      <BlogPostItems items={items} />
+    <div style={{ margin: "0 10%" }}>
+      {items.map(({ content: BlogPostContent }) => (
+        <div key={BlogPostContent.metadata.permalink} className="postitem">
+          <Date date={BlogPostContent.metadata.date} />
+          <BlogPostItem
+            forontMatter={BlogPostContent.forontMatter}
+            authors={BlogPostContent.metadata.authors}
+            metadata={BlogPostContent.metadata}
+          >
+            <BlogPostContent />
+          </BlogPostItem>
+        </div>
+      ))}
       <BlogListPaginator metadata={metadata} />
     </div>
   );
