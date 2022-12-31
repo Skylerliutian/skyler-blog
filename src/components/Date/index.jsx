@@ -3,8 +3,8 @@ import "./style.css";
 
 const DateComponent = ({ date }) => {
   const time = new Date(date);
-  const month = time.getMonth();
-  const day = time.getDay();
+  const month = time.getMonth() + 1;
+  const day = time.getDate();
   return (
     <div className="post-item-date">
       <div className="month">{month}月</div>
