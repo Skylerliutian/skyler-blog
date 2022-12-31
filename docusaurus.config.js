@@ -116,14 +116,14 @@ const config = {
         // copyright: `<p>Copyright © ${new Date().getFullYear()} 峰华 (张旭乾) Built with Docusaurus.</p><p><a href="http://beian.miit.gov.cn/" >冀ICP备14007097号-3</a></p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/img/creative-commons-license-icon.png" /></a>`,
         copyright: `<p>Copyright © ${new Date().getFullYear()} Skyler, Inc. Built with Docusaurus.</p><p><a href="http://beian.miit.gov.cn/" >京ICP备2022025344号-1</a></p>`,
       },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
+      // prism: {
+      //   theme: lightCodeTheme,
+      //   darkTheme: darkCodeTheme,
+      // },
       // 明暗主题切换
       colorMode: {
         defaultMode: "light",
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       // 公告栏

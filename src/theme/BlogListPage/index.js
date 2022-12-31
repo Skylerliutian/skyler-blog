@@ -50,7 +50,7 @@ const BlogListPageContent = (props) => {
         <div key={BlogPostContent.metadata.permalink} className="postitem">
           <Date date={BlogPostContent.metadata.date} />
           <BlogPostItem
-            forontMatter={BlogPostContent.forontMatter}
+            frontMatter={BlogPostContent.frontMatter}
             authors={BlogPostContent.metadata.authors}
             metadata={BlogPostContent.metadata}
           >

@@ -19,7 +19,6 @@ function pluralize(count, word) {
 
 function BlogTagsPostPage(props) {
   const { metadata, items, tag } = props;
-  console.log(props, "123");
   const { allTagsPath, label: tagName, count } = tag;
 
   const i18nTitle = translate({

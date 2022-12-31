@@ -12,7 +12,6 @@ import BlogPostItemContainer from "@theme/BlogPostItem/Container";
 import BlogPostItemHeader from "@theme/BlogPostItem/Header";
 import BlogPostItemContent from "@theme/BlogPostItem/Content";
 import BlogPostItemFooter from "@theme/BlogPostItem/Footer";
-import type { Props } from "@theme/BlogPostItem";
 
 // apply a bottom margin in list view
 function useContainerClassName() {
@@ -27,9 +26,9 @@ export default function BlogPostItem({
   frontMatter,
   authors,
   metadata,
-}: any): JSX.Element {
+  isBlogPostPage = false,
+}) {
   const containerClassName = useContainerClassName();
-  const isBlogPostPage = false;
   return (
     <BlogPostItemContainer
       className={clsx(containerClassName, className)}

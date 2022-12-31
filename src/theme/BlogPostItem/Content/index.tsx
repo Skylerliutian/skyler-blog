@@ -9,6 +9,8 @@ import React from "react";
 import clsx from "clsx";
 import { blogPostContainerID } from "@docusaurus/utils-common";
 import MDXContent from "@theme/MDXContent";
+import { MDXProvider } from "@mdx-js/react";
+import MDXComponents from "@theme/MDXComponents";
 import type { Props } from "@theme/BlogPostItem/Content";
 
 export default function BlogPostItemContent({
@@ -23,6 +25,7 @@ export default function BlogPostItemContent({
       className={clsx("markdown", className)}
       itemProp="articleBody"
     >
+      {/* <MDXProvider components={MDXComponents}>{children}</MDXProvider> */}
       <MDXContent>{children}</MDXContent>
     </div>
   );
