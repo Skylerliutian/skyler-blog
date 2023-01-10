@@ -55,6 +55,7 @@ const config = {
       }),
     ],
   ],
+  plugins: ["docusaurus-plugin-google-adsense"],
   //   plugins: [
   //     [
   //       "@docusaurus/plugin-content-blog",
