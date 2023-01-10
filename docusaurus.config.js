@@ -72,7 +72,7 @@ const config = {
   //   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       navbar: {
         title: "Skyler's Blog",
         logo: {
@@ -134,7 +134,10 @@ const config = {
       //   textColor: "#091E42",
       //   // isCloseable: true,
       // },
-    }),
+      googleAdsense: {
+        dataAdClient: "ca-pub-1295226492094674",
+      },
+    },
 };
 
 module.exports = config;

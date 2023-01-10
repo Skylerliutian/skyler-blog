@@ -32,7 +32,8 @@
     "react-spring": "^9.5.2"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.0.1"
+    "@docusaurus/module-type-aliases": "2.0.1",
+    "docusaurus-plugin-google-adsense": "^0.3.1"
   },
   "browserslist": {
     "production": [
