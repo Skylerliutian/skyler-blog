@@ -37,6 +37,7 @@ const sidebars = {
         "learn/tools/swingButton/swing-button",
         "learn/tools/navBar/navbar",
         "learn/tools/shakeEffect/shake-effect",
+        "learn/tools/scrollNum/scroll-num",
       ],
     },
   ],
