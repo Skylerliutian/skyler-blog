@@ -50,6 +50,21 @@
   right: 215px;
   animation: rotation 3s linear infinite;
 }
+.dropdown {
+  position: relative;
+}
+.dropdown img {
+  max-width: none;
+}
+
+.weixinContent {
+  visibility: hidden;
+  border-radius: 10px;
+  height: 180px;
+}
+.dropdown:hover .weixinContent {
+  visibility: visible;
+}
 
 @keyframes rotation {
   from {

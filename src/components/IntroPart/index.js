@@ -9,6 +9,7 @@ import HTMLImg from "./img/html.svg";
 import GearImg from "./img/gear.svg";
 import BilibiliIcon from "./img/bilibili.svg";
 import styles from "./styles.module.css";
+import wxQRcode from "./img/wxQRcode.jpg";
 
 function SocialLinks({ animatedProps, ...props }) {
   // const { isDarkTheme } = useThemeContext();
@@ -20,9 +21,10 @@ function SocialLinks({ animatedProps, ...props }) {
       <a href="https://github.com/Skylerliutian">
         <FontAwesomeIcon icon={faGithub} size="lg" />
       </a>
-      <a>
+      <div className={styles.dropdown}>
         <FontAwesomeIcon icon={faWeixin} size="lg" />
-      </a>
+        <img className={styles.weixinContent} src={wxQRcode}></img>
+      </div>
     </animated.div>
   );
 }
